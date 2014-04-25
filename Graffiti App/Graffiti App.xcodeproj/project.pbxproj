@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15ECE52D190AED4E006B9751 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ECE52C190AED4E006B9751 /* MapKit.framework */; };
 		E6E41FA8190AEC9400A5F073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E41FA7190AEC9400A5F073 /* Foundation.framework */; };
 		E6E41FAA190AEC9400A5F073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E41FA9190AEC9400A5F073 /* CoreGraphics.framework */; };
 		E6E41FAC190AEC9400A5F073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E41FAB190AEC9400A5F073 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15ECE52C190AED4E006B9751 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E6E41FA4190AEC9400A5F073 /* Graffiti App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graffiti App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E41FA7190AEC9400A5F073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6E41FA9190AEC9400A5F073 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15ECE52D190AED4E006B9751 /* MapKit.framework in Frameworks */,
 				E6E41FAA190AEC9400A5F073 /* CoreGraphics.framework in Frameworks */,
 				E6E41FAC190AEC9400A5F073 /* UIKit.framework in Frameworks */,
 				E6E41FA8190AEC9400A5F073 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		E6E41FA6190AEC9400A5F073 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15ECE52C190AED4E006B9751 /* MapKit.framework */,
 				E6E41FA7190AEC9400A5F073 /* Foundation.framework */,
 				E6E41FA9190AEC9400A5F073 /* CoreGraphics.framework */,
 				E6E41FAB190AEC9400A5F073 /* UIKit.framework */,
@@ -457,6 +461,7 @@
 				E6E41FD8190AEC9400A5F073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6E41FD9190AEC9400A5F073 /* Build configuration list for PBXNativeTarget "Graffiti AppTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +470,7 @@
 				E6E41FDB190AEC9400A5F073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
