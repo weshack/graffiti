@@ -21,6 +21,7 @@
 		E6E41FC9190AEC9400A5F073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E41FAB190AEC9400A5F073 /* UIKit.framework */; };
 		E6E41FD1190AEC9400A5F073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6E41FCF190AEC9400A5F073 /* InfoPlist.strings */; };
 		E6E41FD3190AEC9400A5F073 /* Graffiti_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E41FD2190AEC9400A5F073 /* Graffiti_AppTests.m */; };
+		E6E41FDE190AEDF200A5F073 /* GrafittAppCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E41FDD190AEDF200A5F073 /* GrafittAppCameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		E6E41FCE190AEC9400A5F073 /* Graffiti AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graffiti AppTests-Info.plist"; sourceTree = "<group>"; };
 		E6E41FD0190AEC9400A5F073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E6E41FD2190AEC9400A5F073 /* Graffiti_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graffiti_AppTests.m; sourceTree = "<group>"; };
+		E6E41FDC190AEDF200A5F073 /* GrafittAppCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrafittAppCameraViewController.h; sourceTree = "<group>"; };
+		E6E41FDD190AEDF200A5F073 /* GrafittAppCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrafittAppCameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				E6E41FBD190AEC9400A5F073 /* GrafittAppViewController.m */,
 				E6E41FBF190AEC9400A5F073 /* Images.xcassets */,
 				E6E41FAE190AEC9400A5F073 /* Supporting Files */,
+				E6E41FDC190AEDF200A5F073 /* GrafittAppCameraViewController.h */,
+				E6E41FDD190AEDF200A5F073 /* GrafittAppCameraViewController.m */,
 			);
 			path = "Graffiti App";
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			files = (
 				E6E41FB8190AEC9400A5F073 /* GrafittAppAppDelegate.m in Sources */,
 				E6E41FB4190AEC9400A5F073 /* main.m in Sources */,
+				E6E41FDE190AEDF200A5F073 /* GrafittAppCameraViewController.m in Sources */,
 				E6E41FBE190AEC9400A5F073 /* GrafittAppViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
