@@ -34,7 +34,7 @@ handleResponse = function(data) {
           map: map,
           title: image.url
       });
-      var url = '/static/graffiti/' + image.url+ '.png';
+      var url = '/static/graffiti/' + image.url+ '.jpg';
       infowindows[image.url] = new google.maps.InfoWindow({
         content: '<a href="'+url+'" target="_blank"><img src="'+url+'"></a>'
       });
@@ -46,5 +46,5 @@ handleResponse = function(data) {
           infowindows[image.url].open(map, markers[image.url]);
       });
     }
-  })
+  });
 };
