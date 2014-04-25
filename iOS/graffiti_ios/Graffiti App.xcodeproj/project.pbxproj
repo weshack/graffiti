@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6790C9E190ABF3F00E1E87B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6790C9D190ABF3F00E1E87B /* Foundation.framework */; };
+		E6790CA0190ABF3F00E1E87B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6790C9F190ABF3F00E1E87B /* CoreGraphics.framework */; };
+		E6790CA2190ABF3F00E1E87B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6790CA1190ABF3F00E1E87B /* UIKit.framework */; };
+		E6790CA8190ABF3F00E1E87B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6790CA6190ABF3F00E1E87B /* InfoPlist.strings */; };
+		E6790CAA190ABF3F00E1E87B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6790CA9190ABF3F00E1E87B /* main.m */; };
+		E6790CAE190ABF3F00E1E87B /* GrafittAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6790CAD190ABF3F00E1E87B /* GrafittAppAppDelegate.m */; };
+		E6790CB1190ABF3F00E1E87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6790CAF190ABF3F00E1E87B /* Main.storyboard */; };
+		E6790CB4190ABF3F00E1E87B /* GrafittAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6790CB3190ABF3F00E1E87B /* GrafittAppViewController.m */; };
+		E6790CB6190ABF3F00E1E87B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6790CB5190ABF3F00E1E87B /* Images.xcassets */; };
+		E6790CBD190ABF3F00E1E87B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6790CBC190ABF3F00E1E87B /* XCTest.framework */; };
+		E6790CBE190ABF3F00E1E87B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6790C9D190ABF3F00E1E87B /* Foundation.framework */; };
+		E6790CBF190ABF3F00E1E87B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6790CA1190ABF3F00E1E87B /* UIKit.framework */; };
+		E6790CC7190ABF3F00E1E87B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6790CC5190ABF3F00E1E87B /* InfoPlist.strings */; };
+		E6790CC9190ABF3F00E1E87B /* Graffiti_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6790CC8190ABF3F00E1E87B /* Graffiti_AppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6790CC0190ABF3F00E1E87B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6790C92190ABF3F00E1E87B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6790C99190ABF3F00E1E87B;
+			remoteInfo = "Graffiti App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6790C9A190ABF3F00E1E87B /* Graffiti App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graffiti App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6790C9D190ABF3F00E1E87B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E6790C9F190ABF3F00E1E87B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E6790CA1190ABF3F00E1E87B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E6790CA5190ABF3F00E1E87B /* Graffiti App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graffiti App-Info.plist"; sourceTree = "<group>"; };
+		E6790CA7190ABF3F00E1E87B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6790CA9190ABF3F00E1E87B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6790CAB190ABF3F00E1E87B /* Graffiti App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Graffiti App-Prefix.pch"; sourceTree = "<group>"; };
+		E6790CAC190ABF3F00E1E87B /* GrafittAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrafittAppAppDelegate.h; sourceTree = "<group>"; };
+		E6790CAD190ABF3F00E1E87B /* GrafittAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrafittAppAppDelegate.m; sourceTree = "<group>"; };
+		E6790CB0190ABF3F00E1E87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6790CB2190ABF3F00E1E87B /* GrafittAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrafittAppViewController.h; sourceTree = "<group>"; };
+		E6790CB3190ABF3F00E1E87B /* GrafittAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrafittAppViewController.m; sourceTree = "<group>"; };
+		E6790CB5190ABF3F00E1E87B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E6790CBB190ABF3F00E1E87B /* Graffiti AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Graffiti AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6790CBC190ABF3F00E1E87B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E6790CC4190ABF3F00E1E87B /* Graffiti AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graffiti AppTests-Info.plist"; sourceTree = "<group>"; };
+		E6790CC6190ABF3F00E1E87B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6790CC8190ABF3F00E1E87B /* Graffiti_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graffiti_AppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6790C97190ABF3F00E1E87B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6790CA0190ABF3F00E1E87B /* CoreGraphics.framework in Frameworks */,
+				E6790CA2190ABF3F00E1E87B /* UIKit.framework in Frameworks */,
+				E6790C9E190ABF3F00E1E87B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6790CB8190ABF3F00E1E87B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6790CBD190ABF3F00E1E87B /* XCTest.framework in Frameworks */,
+				E6790CBF190ABF3F00E1E87B /* UIKit.framework in Frameworks */,
+				E6790CBE190ABF3F00E1E87B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6790C91190ABF3F00E1E87B = {
+			isa = PBXGroup;
+			children = (
+				E6790CA3190ABF3F00E1E87B /* Graffiti App */,
+				E6790CC2190ABF3F00E1E87B /* Graffiti AppTests */,
+				E6790C9C190ABF3F00E1E87B /* Frameworks */,
+				E6790C9B190ABF3F00E1E87B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6790C9B190ABF3F00E1E87B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6790C9A190ABF3F00E1E87B /* Graffiti App.app */,
+				E6790CBB190ABF3F00E1E87B /* Graffiti AppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6790C9C190ABF3F00E1E87B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6790C9D190ABF3F00E1E87B /* Foundation.framework */,
+				E6790C9F190ABF3F00E1E87B /* CoreGraphics.framework */,
+				E6790CA1190ABF3F00E1E87B /* UIKit.framework */,
+				E6790CBC190ABF3F00E1E87B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6790CA3190ABF3F00E1E87B /* Graffiti App */ = {
+			isa = PBXGroup;
+			children = (
+				E6790CAC190ABF3F00E1E87B /* GrafittAppAppDelegate.h */,
+				E6790CAD190ABF3F00E1E87B /* GrafittAppAppDelegate.m */,
+				E6790CAF190ABF3F00E1E87B /* Main.storyboard */,
+				E6790CB2190ABF3F00E1E87B /* GrafittAppViewController.h */,
+				E6790CB3190ABF3F00E1E87B /* GrafittAppViewController.m */,
+				E6790CB5190ABF3F00E1E87B /* Images.xcassets */,
+				E6790CA4190ABF3F00E1E87B /* Supporting Files */,
+			);
+			path = "Graffiti App";
+			sourceTree = "<group>";
+		};
+		E6790CA4190ABF3F00E1E87B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6790CA5190ABF3F00E1E87B /* Graffiti App-Info.plist */,
+				E6790CA6190ABF3F00E1E87B /* InfoPlist.strings */,
+				E6790CA9190ABF3F00E1E87B /* main.m */,
+				E6790CAB190ABF3F00E1E87B /* Graffiti App-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6790CC2190ABF3F00E1E87B /* Graffiti AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6790CC8190ABF3F00E1E87B /* Graffiti_AppTests.m */,
+				E6790CC3190ABF3F00E1E87B /* Supporting Files */,
+			);
+			path = "Graffiti AppTests";
+			sourceTree = "<group>";
+		};
+		E6790CC3190ABF3F00E1E87B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6790CC4190ABF3F00E1E87B /* Graffiti AppTests-Info.plist */,
+				E6790CC5190ABF3F00E1E87B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6790C99190ABF3F00E1E87B /* Graffiti App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6790CCC190ABF3F00E1E87B /* Build configuration list for PBXNativeTarget "Graffiti App" */;
+			buildPhases = (
+				E6790C96190ABF3F00E1E87B /* Sources */,
+				E6790C97190ABF3F00E1E87B /* Frameworks */,
+				E6790C98190ABF3F00E1E87B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Graffiti App";
+			productName = "Graffiti App";
+			productReference = E6790C9A190ABF3F00E1E87B /* Graffiti App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6790CBA190ABF3F00E1E87B /* Graffiti AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6790CCF190ABF3F00E1E87B /* Build configuration list for PBXNativeTarget "Graffiti AppTests" */;
+			buildPhases = (
+				E6790CB7190ABF3F00E1E87B /* Sources */,
+				E6790CB8190ABF3F00E1E87B /* Frameworks */,
+				E6790CB9190ABF3F00E1E87B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6790CC1190ABF3F00E1E87B /* PBXTargetDependency */,
+			);
+			name = "Graffiti AppTests";
+			productName = "Graffiti AppTests";
+			productReference = E6790CBB190ABF3F00E1E87B /* Graffiti AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6790C92190ABF3F00E1E87B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GrafittApp;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = WesHack;
+				TargetAttributes = {
+					E6790CBA190ABF3F00E1E87B = {
+						TestTargetID = E6790C99190ABF3F00E1E87B;
+					};
+				};
+			};
+			buildConfigurationList = E6790C95190ABF3F00E1E87B /* Build configuration list for PBXProject "Graffiti App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6790C91190ABF3F00E1E87B;
+			productRefGroup = E6790C9B190ABF3F00E1E87B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6790C99190ABF3F00E1E87B /* Graffiti App */,
+				E6790CBA190ABF3F00E1E87B /* Graffiti AppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6790C98190ABF3F00E1E87B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6790CB6190ABF3F00E1E87B /* Images.xcassets in Resources */,
+				E6790CA8190ABF3F00E1E87B /* InfoPlist.strings in Resources */,
+				E6790CB1190ABF3F00E1E87B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6790CB9190ABF3F00E1E87B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6790CC7190ABF3F00E1E87B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6790C96190ABF3F00E1E87B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6790CAE190ABF3F00E1E87B /* GrafittAppAppDelegate.m in Sources */,
+				E6790CAA190ABF3F00E1E87B /* main.m in Sources */,
+				E6790CB4190ABF3F00E1E87B /* GrafittAppViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6790CB7190ABF3F00E1E87B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6790CC9190ABF3F00E1E87B /* Graffiti_AppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6790CC1190ABF3F00E1E87B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6790C99190ABF3F00E1E87B /* Graffiti App */;
+			targetProxy = E6790CC0190ABF3F00E1E87B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6790CA6190ABF3F00E1E87B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6790CA7190ABF3F00E1E87B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E6790CAF190ABF3F00E1E87B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6790CB0190ABF3F00E1E87B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6790CC5190ABF3F00E1E87B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6790CC6190ABF3F00E1E87B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6790CCA190ABF3F00E1E87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E6790CCB190ABF3F00E1E87B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6790CCD190ABF3F00E1E87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graffiti App/Graffiti App-Prefix.pch";
+				INFOPLIST_FILE = "Graffiti App/Graffiti App-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E6790CCE190ABF3F00E1E87B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graffiti App/Graffiti App-Prefix.pch";
+				INFOPLIST_FILE = "Graffiti App/Graffiti App-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E6790CD0190ABF3F00E1E87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Graffiti App.app/Graffiti App";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graffiti App/Graffiti App-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Graffiti AppTests/Graffiti AppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E6790CD1190ABF3F00E1E87B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Graffiti App.app/Graffiti App";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graffiti App/Graffiti App-Prefix.pch";
+				INFOPLIST_FILE = "Graffiti AppTests/Graffiti AppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6790C95190ABF3F00E1E87B /* Build configuration list for PBXProject "Graffiti App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6790CCA190ABF3F00E1E87B /* Debug */,
+				E6790CCB190ABF3F00E1E87B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6790CCC190ABF3F00E1E87B /* Build configuration list for PBXNativeTarget "Graffiti App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6790CCD190ABF3F00E1E87B /* Debug */,
+				E6790CCE190ABF3F00E1E87B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E6790CCF190ABF3F00E1E87B /* Build configuration list for PBXNativeTarget "Graffiti AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6790CD0190ABF3F00E1E87B /* Debug */,
+				E6790CD1190ABF3F00E1E87B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6790C92190ABF3F00E1E87B /* Project object */;
+}
