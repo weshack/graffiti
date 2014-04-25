@@ -9,7 +9,6 @@ Email
     verkey Text Maybe
     UniqueEmail email
 Image
-    url Text
     latitude Double
     longitude Double
     timestamp Int
