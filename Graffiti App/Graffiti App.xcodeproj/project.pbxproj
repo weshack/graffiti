@@ -22,6 +22,7 @@
 		E6E41FC9190AEC9400A5F073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E41FAB190AEC9400A5F073 /* UIKit.framework */; };
 		E6E41FD1190AEC9400A5F073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6E41FCF190AEC9400A5F073 /* InfoPlist.strings */; };
 		E6E41FD3190AEC9400A5F073 /* Graffiti_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E41FD2190AEC9400A5F073 /* Graffiti_AppTests.m */; };
+		EBDDEAAC190AF98500A1A391 /* GrafittApp_get.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDDEAAB190AF98500A1A391 /* GrafittApp_get.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		E6E41FCE190AEC9400A5F073 /* Graffiti AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graffiti AppTests-Info.plist"; sourceTree = "<group>"; };
 		E6E41FD0190AEC9400A5F073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E6E41FD2190AEC9400A5F073 /* Graffiti_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graffiti_AppTests.m; sourceTree = "<group>"; };
+		EBDDEAAA190AF98500A1A391 /* GrafittApp_get.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrafittApp_get.h; sourceTree = "<group>"; };
+		EBDDEAAB190AF98500A1A391 /* GrafittApp_get.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrafittApp_get.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				E6E41FB6190AEC9400A5F073 /* GrafittAppAppDelegate.h */,
 				E6E41FB7190AEC9400A5F073 /* GrafittAppAppDelegate.m */,
 				E6E41FB9190AEC9400A5F073 /* Main.storyboard */,
+				EBDDEAAA190AF98500A1A391 /* GrafittApp_get.h */,
+				EBDDEAAB190AF98500A1A391 /* GrafittApp_get.m */,
 				E6E41FBC190AEC9400A5F073 /* GrafittAppViewController.h */,
 				E6E41FBD190AEC9400A5F073 /* GrafittAppViewController.m */,
 				E6E41FBF190AEC9400A5F073 /* Images.xcassets */,
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDDEAAC190AF98500A1A391 /* GrafittApp_get.m in Sources */,
 				E6E41FB8190AEC9400A5F073 /* GrafittAppAppDelegate.m in Sources */,
 				E6E41FB4190AEC9400A5F073 /* main.m in Sources */,
 				E6E41FBE190AEC9400A5F073 /* GrafittAppViewController.m in Sources */,
