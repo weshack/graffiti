@@ -1,4 +1,5 @@
 {-# LANGUAGE TupleSections, OverloadedStrings #-}
+{-# LANGUAGE FlexibleInstances   #-}
 module Handler.Home where
 
 import Import
@@ -10,6 +11,10 @@ import Import
 -- The majority of the code you will write in Yesod lives in these handler
 -- functions. You can spread them across multiple files if you are so
 -- inclined, or create a single monolithic file.
+
+instance ToJSON (Entity Image) where
+    toJSON (Entity tid (Image url lat long time)) = object
+        [ "url" .= url, "latitude" .= lat, "longitude" .= long, "timestamp" .= time ]
 getHomeR :: Handler Html
 getHomeR = do
     (formWidget, formEnctype) <- generateFormPost sampleForm
@@ -37,3 +42,8 @@ sampleForm :: Form (FileInfo, Text)
 sampleForm = renderDivs $ (,)
     <$> fileAFormReq "Choose a file"
     <*> areq textField "What's on the file?" Nothing
+
+getImagesR :: Handler Value
+getImagesR = do
+    images <- runDB $ selectList [] [] :: Handler [Entity Image]
+    returnJson images
