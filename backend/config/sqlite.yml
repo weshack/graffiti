@@ -1,0 +1,20 @@
+Default: &defaults
+  database: graffiti.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: graffiti_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: graffiti_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: graffiti_production.sqlite3
+  poolsize: 100
+  <<: *defaults
