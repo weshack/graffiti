@@ -19,6 +19,10 @@ getHomeR = do
 postHomeR :: Handler Html
 postHomeR = getHomeR
 
+getMapR :: Handler Html
+getMapR = do
+    sendFile "text/html" "static/map.html"
+
 dist :: Double -> Double -> Entity Image -> Double
 dist x y (Entity _ (Image lat long _)) = (x - lat) * (x - lat) + (y - long) * (y - long)
 
@@ -47,7 +51,7 @@ uploadDirectory :: FilePath
 uploadDirectory = "static/graffiti"
 
 writeToServer :: Key Image -> FileInfo -> Handler ()
-writeToServer tId file = liftIO $ fileMove file (uploadDirectory </> ((show tId) ++ ".png"))
+writeToServer tId file = liftIO $ fileMove file (uploadDirectory </> ((show tId) ++ ".jpg"))
 
 uploadForm :: Html -> MForm Handler (FormResult (FileInfo, Int), Widget)
 uploadForm = renderDivs $ (,)
