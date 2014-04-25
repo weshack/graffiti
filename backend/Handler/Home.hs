@@ -3,7 +3,7 @@
 module Handler.Home where
 
 import Import
-
+import Data.List
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
@@ -47,3 +47,14 @@ getImagesR :: Handler Value
 getImagesR = do
     images <- runDB $ selectList [] [] :: Handler [Entity Image]
     returnJson images
+
+dist :: Double -> Double -> Entity Image -> Double
+dist x y (Entity _ (Image _ lat long _)) = (x - lat) * (x - lat) + (y - long) * (y - long)
+
+getImagesNearR :: String -> String -> Handler Value
+getImagesNearR latT longT = do
+    let lat = read latT :: Double
+    let long = read longT :: Double
+    images <- runDB $ selectList [] [] :: Handler [Entity Image]
+    let closest = take 50 $ sortBy (\e1 e2 -> compare (dist lat long e1) (dist lat long e2) ) images
+    returnJson closest

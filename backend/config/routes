@@ -5,4 +5,5 @@
 /robots.txt RobotsR GET
 
 / HomeR GET POST
-/all-images ImagesR GET
+/images/all ImagesR GET
+/images/near/#String/#String ImagesNearR GET
