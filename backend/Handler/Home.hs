@@ -13,16 +13,11 @@ instance ToJSON (Entity Image) where
 
 
 getHomeR :: Handler Html
-getHomeR = defaultLayout $ do
-        setTitle "Welcome To Yesod!"
+getHomeR = do
+    sendFile "text/html" "static/index.html"
 
 postHomeR :: Handler Html
 postHomeR = getHomeR
-
-getImagesR :: Handler Value
-getImagesR = do
-    images <- runDB $ selectList [] [] :: Handler [Entity Image]
-    returnJson images
 
 dist :: Double -> Double -> Entity Image -> Double
 dist x y (Entity _ (Image lat long _)) = (x - lat) * (x - lat) + (y - long) * (y - long)
@@ -35,8 +30,8 @@ getImagesNearR latT longT = do
     let closest = take 50 $ sortBy (\e1 e2 -> compare (dist lat long e1) (dist lat long e2) ) images
     returnJson closest
 
-postImagesR :: String -> String -> Handler Value
-postImagesR latT longT = do
+postUploadImagesR :: String -> String -> Handler Value
+postUploadImagesR latT longT = do
     let lat = read latT :: Double
     let long = read longT :: Double
     ((result, _), _) <- runFormPost uploadForm
@@ -49,7 +44,7 @@ postImagesR latT longT = do
             returnJson $ object [ "result" .= ("error" :: Text) ]
 
 uploadDirectory :: FilePath
-uploadDirectory = "static"
+uploadDirectory = "static/graffiti"
 
 writeToServer :: Key Image -> FileInfo -> Handler ()
 writeToServer tId file = liftIO $ fileMove file (uploadDirectory </> ((show tId) ++ ".png"))
@@ -58,7 +53,6 @@ uploadForm :: Html -> MForm Handler (FormResult (FileInfo, Int), Widget)
 uploadForm = renderDivs $ (,)
     <$> fileAFormReq "Image file"
     <*> lift (liftIO getTime)
-
 
 getTime :: (Integral a) => IO a
 getTime = getCurrentTime >>= return . floor . utctDayTime
