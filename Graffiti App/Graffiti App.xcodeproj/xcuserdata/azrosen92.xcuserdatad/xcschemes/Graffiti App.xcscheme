@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6790C99190ABF3F00E1E87B"
+               BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
                BuildableName = "Graffiti App.app"
                BlueprintName = "Graffiti App"
                ReferencedContainer = "container:Graffiti App.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6790CBA190ABF3F00E1E87B"
+               BlueprintIdentifier = "E6E41FC4190AEC9400A5F073"
                BuildableName = "Graffiti AppTests.xctest"
                BlueprintName = "Graffiti AppTests"
                ReferencedContainer = "container:Graffiti App.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6790C99190ABF3F00E1E87B"
+            BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
             BuildableName = "Graffiti App.app"
             BlueprintName = "Graffiti App"
             ReferencedContainer = "container:Graffiti App.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6790C99190ABF3F00E1E87B"
+            BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
             BuildableName = "Graffiti App.app"
             BlueprintName = "Graffiti App"
             ReferencedContainer = "container:Graffiti App.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6790C99190ABF3F00E1E87B"
+            BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
             BuildableName = "Graffiti App.app"
             BlueprintName = "Graffiti App"
             ReferencedContainer = "container:Graffiti App.xcodeproj">
