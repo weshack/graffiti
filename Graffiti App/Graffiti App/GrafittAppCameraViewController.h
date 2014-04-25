@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GrafittAppCameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface GrafittAppCameraViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *cameraImageView;
 
