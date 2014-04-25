@@ -4,6 +4,8 @@ module Handler.Home where
 
 import Import
 import Data.List
+import System.FilePath
+import Data.Time (UTCTime,getCurrentTime)
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
@@ -14,7 +16,9 @@ import Data.List
 
 instance ToJSON (Entity Image) where
     toJSON (Entity tid (Image url lat long time)) = object
-        [ "url" .= url, "latitude" .= lat, "longitude" .= long, "timestamp" .= time ]
+        [ "id" .= tid, "latitude" .= lat, "longitude" .= long, "timestamp" .= time ]
+
+
 getHomeR :: Handler Html
 getHomeR = do
     (formWidget, formEnctype) <- generateFormPost sampleForm
@@ -38,18 +42,13 @@ postHomeR = do
         setTitle "Welcome To Yesod!"
         $(widgetFile "homepage")
 
-sampleForm :: Form (FileInfo, Text)
-sampleForm = renderDivs $ (,)
-    <$> fileAFormReq "Choose a file"
-    <*> areq textField "What's on the file?" Nothing
-
 getImagesR :: Handler Value
 getImagesR = do
     images <- runDB $ selectList [] [] :: Handler [Entity Image]
     returnJson images
 
 dist :: Double -> Double -> Entity Image -> Double
-dist x y (Entity _ (Image _ lat long _)) = (x - lat) * (x - lat) + (y - long) * (y - long)
+dist x y (Entity _ (Image lat long _)) = (x - lat) * (x - lat) + (y - long) * (y - long)
 
 getImagesNearR :: String -> String -> Handler Value
 getImagesNearR latT longT = do
@@ -58,3 +57,31 @@ getImagesNearR latT longT = do
     images <- runDB $ selectList [] [] :: Handler [Entity Image]
     let closest = take 50 $ sortBy (\e1 e2 -> compare (dist lat long e1) (dist lat long e2) ) images
     returnJson closest
+
+postImagesR :: String -> String -> Handler Value
+postImagesR = do
+    let lat = read latT :: Double
+    let long = read longT :: Double
+    ((result, widget), enctype) <- runFormPost uploadForm
+        case result of
+            FormSuccess (file, date) -> do
+                -- TODO: check if image already exists
+                -- save to image directory
+                newId <- runDB $ insert (Image lat long date)
+                filename <- writeToServer newId file
+                returnJson $ object [ "result" .= "ok" ]
+            _ -> do
+                returnJson $ object [ "result" .= "error" ]
+
+uploadDirectory :: FilePath
+uploadDirectory = "static"
+
+writeToServer :: Text -> FileInfo -> Handler FilePath
+writeToServer tId file = do 
+    liftIO $ fileMove file (uploadDirectory </> ((unpack tId) ++ ".png")
+    return filename
+
+uploadForm :: Html -> MForm App App (FormResult (FileInfo, Maybe Textarea, UTCTime), Widget)
+uploadForm = renderBootstrap $ (,,)
+    <$> fileAFormReq "Image file"
+    <*> aformM (liftIO getCurrentTime)
