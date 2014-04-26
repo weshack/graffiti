@@ -48,7 +48,7 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
-    self.cameraImageView.image = chosenImage;
+    self.imageView.image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
