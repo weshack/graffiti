@@ -1,6 +1,6 @@
 //
-//  Graffiti_AppTests.m
-//  Graffiti AppTests
+//  GraffitiAppTests.m
+//  GraffitiAppTests
 //
 //  Created by Aaron Rosen on 4/25/14.
 //  Copyright (c) 2014 WesHack. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface Graffiti_AppTests : XCTestCase
+@interface GraffitiAppTests : XCTestCase
 
 @end
 
-@implementation Graffiti_AppTests
+@implementation GraffitiAppTests
 
 - (void)setUp
 {

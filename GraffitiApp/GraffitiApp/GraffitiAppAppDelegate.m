@@ -1,14 +1,14 @@
 //
-//  GrafittAppAppDelegate.m
-//  Graffiti App
+//  GraffitiAppAppDelegate.m
+//  GraffitiApp
 //
 //  Created by Aaron Rosen on 4/25/14.
 //  Copyright (c) 2014 WesHack. All rights reserved.
 //
 
-#import "GrafittAppAppDelegate.h"
+#import "GraffitiAppAppDelegate.h"
 
-@implementation GrafittAppAppDelegate
+@implementation GraffitiAppAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

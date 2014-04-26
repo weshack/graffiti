@@ -1,18 +1,18 @@
 //
-//  GrafittAppMapViewController.m
-//  Graffiti App
+//  GraffitiAppMapViewController.m
+//  GraffitiApp
 //
 //  Created by Aaron Rosen on 4/25/14.
 //  Copyright (c) 2014 WesHack. All rights reserved.
 //
 
-#import "GrafittAppMapViewController.h"
+#import "GraffitiAppMapViewController.h"
 
-@interface GrafittAppMapViewController ()
+@interface GraffitiAppMapViewController ()
 
 @end
 
-@implementation GrafittAppMapViewController
+@implementation GraffitiAppMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,18 +30,11 @@
     _mapView.delegate = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)didReceiveMemoryWarning
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-*/
-
-
 
 - (void)mapView:(MKMapView *)mapView
 didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -57,12 +50,15 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
     [_mapView setRegion:region animated:YES];
 }
 
-- (void)didReceiveMemoryWarning
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
-
+*/
 
 @end
