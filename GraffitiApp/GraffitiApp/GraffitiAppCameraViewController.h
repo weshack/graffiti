@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraffitiAppCameraViewController : UIViewController
+@interface GraffitiAppCameraViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 

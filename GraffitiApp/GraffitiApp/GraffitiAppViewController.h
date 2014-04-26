@@ -10,6 +10,4 @@
 
 @interface GraffitiAppViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
 @end
