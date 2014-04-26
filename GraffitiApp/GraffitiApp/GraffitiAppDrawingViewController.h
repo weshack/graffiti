@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 WesHack. All rights reserved.
 //
 
+//TODO: need to instantiate UIImageView *drawingView with a photo underneath so you can draw on that photo.
 #import <UIKit/UIKit.h>
 
 @interface GraffitiAppDrawingViewController : UIViewController{
