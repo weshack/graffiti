@@ -3,49 +3,25 @@
 module Handler.Home where
 
 import Import
-import Data.List
+import Data.List (sortBy)
 import System.FilePath
-import Data.Time (UTCTime,getCurrentTime)
--- This is a handler function for the GET request method on the HomeR
--- resource pattern. All of your resource patterns are defined in
--- config/routes
---
--- The majority of the code you will write in Yesod lives in these handler
--- functions. You can spread them across multiple files if you are so
--- inclined, or create a single monolithic file.
+import Data.Time (UTCTime,getCurrentTime,utctDayTime)
 
 instance ToJSON (Entity Image) where
-    toJSON (Entity tid (Image url lat long time)) = object
+    toJSON (Entity tid (Image lat long time)) = object
         [ "id" .= tid, "latitude" .= lat, "longitude" .= long, "timestamp" .= time ]
 
 
 getHomeR :: Handler Html
 getHomeR = do
-    (formWidget, formEnctype) <- generateFormPost sampleForm
-    let submission = Nothing :: Maybe (FileInfo, Text)
-        handlerName = "getHomeR" :: Text
-    defaultLayout $ do
-        aDomId <- newIdent
-        setTitle "Welcome To Yesod!"
-        $(widgetFile "homepage")
+    sendFile "text/html" "static/index.html"
 
 postHomeR :: Handler Html
-postHomeR = do
-    ((result, formWidget), formEnctype) <- runFormPost sampleForm
-    let handlerName = "postHomeR" :: Text
-        submission = case result of
-            FormSuccess res -> Just res
-            _ -> Nothing
+postHomeR = getHomeR
 
-    defaultLayout $ do
-        aDomId <- newIdent
-        setTitle "Welcome To Yesod!"
-        $(widgetFile "homepage")
-
-getImagesR :: Handler Value
-getImagesR = do
-    images <- runDB $ selectList [] [] :: Handler [Entity Image]
-    returnJson images
+getMapR :: Handler Html
+getMapR = do
+    sendFile "text/html" "static/map.html"
 
 dist :: Double -> Double -> Entity Image -> Double
 dist x y (Entity _ (Image lat long _)) = (x - lat) * (x - lat) + (y - long) * (y - long)
@@ -58,30 +34,29 @@ getImagesNearR latT longT = do
     let closest = take 50 $ sortBy (\e1 e2 -> compare (dist lat long e1) (dist lat long e2) ) images
     returnJson closest
 
-postImagesR :: String -> String -> Handler Value
-postImagesR = do
+postUploadImagesR :: String -> String -> Handler Value
+postUploadImagesR latT longT = do
     let lat = read latT :: Double
     let long = read longT :: Double
-    ((result, widget), enctype) <- runFormPost uploadForm
-        case result of
-            FormSuccess (file, date) -> do
-                -- TODO: check if image already exists
-                -- save to image directory
-                newId <- runDB $ insert (Image lat long date)
-                filename <- writeToServer newId file
-                returnJson $ object [ "result" .= "ok" ]
-            _ -> do
-                returnJson $ object [ "result" .= "error" ]
+    ((result, _), _) <- runFormPost uploadForm
+    case result of
+        FormSuccess (file, date) -> do
+            newId <- runDB $ insert (Image lat long date)
+            writeToServer newId file
+            returnJson $ object [ "result" .= ("ok" :: Text) ]
+        _ -> do
+            returnJson $ object [ "result" .= ("error" :: Text) ]
 
 uploadDirectory :: FilePath
-uploadDirectory = "static"
+uploadDirectory = "static/graffiti"
 
-writeToServer :: Text -> FileInfo -> Handler FilePath
-writeToServer tId file = do 
-    liftIO $ fileMove file (uploadDirectory </> ((unpack tId) ++ ".png")
-    return filename
+writeToServer :: Key Image -> FileInfo -> Handler ()
+writeToServer tId file = liftIO $ fileMove file (uploadDirectory </> ((show tId) ++ ".jpg"))
 
-uploadForm :: Html -> MForm App App (FormResult (FileInfo, Maybe Textarea, UTCTime), Widget)
-uploadForm = renderBootstrap $ (,,)
+uploadForm :: Html -> MForm Handler (FormResult (FileInfo, Int), Widget)
+uploadForm = renderDivs $ (,)
     <$> fileAFormReq "Image file"
-    <*> aformM (liftIO getCurrentTime)
+    <*> lift (liftIO getTime)
+
+getTime :: (Integral a) => IO a
+getTime = getCurrentTime >>= return . floor . utctDayTime

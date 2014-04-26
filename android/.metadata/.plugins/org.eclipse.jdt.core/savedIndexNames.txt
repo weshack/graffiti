@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/jacoblashner/Hackathon/graffiti/android/.metadata/.plugins/org.eclipse.jdt.core
+1270315800.index
+4155591679.index
+268787720.index
