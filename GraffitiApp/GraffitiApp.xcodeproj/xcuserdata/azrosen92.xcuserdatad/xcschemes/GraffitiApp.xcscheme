@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
-               BuildableName = "Graffiti App.app"
-               BlueprintName = "Graffiti App"
-               ReferencedContainer = "container:Graffiti App.xcodeproj">
+               BlueprintIdentifier = "E6E41FEE190B2FEB00A5F073"
+               BuildableName = "GraffitiApp.app"
+               BlueprintName = "GraffitiApp"
+               ReferencedContainer = "container:GraffitiApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6E41FC4190AEC9400A5F073"
-               BuildableName = "Graffiti AppTests.xctest"
-               BlueprintName = "Graffiti AppTests"
-               ReferencedContainer = "container:Graffiti App.xcodeproj">
+               BlueprintIdentifier = "E6E4200F190B2FEB00A5F073"
+               BuildableName = "GraffitiAppTests.xctest"
+               BlueprintName = "GraffitiAppTests"
+               ReferencedContainer = "container:GraffitiApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
-            BuildableName = "Graffiti App.app"
-            BlueprintName = "Graffiti App"
-            ReferencedContainer = "container:Graffiti App.xcodeproj">
+            BlueprintIdentifier = "E6E41FEE190B2FEB00A5F073"
+            BuildableName = "GraffitiApp.app"
+            BlueprintName = "GraffitiApp"
+            ReferencedContainer = "container:GraffitiApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
-            BuildableName = "Graffiti App.app"
-            BlueprintName = "Graffiti App"
-            ReferencedContainer = "container:Graffiti App.xcodeproj">
+            BlueprintIdentifier = "E6E41FEE190B2FEB00A5F073"
+            BuildableName = "GraffitiApp.app"
+            BlueprintName = "GraffitiApp"
+            ReferencedContainer = "container:GraffitiApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6E41FA3190AEC9400A5F073"
-            BuildableName = "Graffiti App.app"
-            BlueprintName = "Graffiti App"
-            ReferencedContainer = "container:Graffiti App.xcodeproj">
+            BlueprintIdentifier = "E6E41FEE190B2FEB00A5F073"
+            BuildableName = "GraffitiApp.app"
+            BlueprintName = "GraffitiApp"
+            ReferencedContainer = "container:GraffitiApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

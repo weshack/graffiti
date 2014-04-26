@@ -1,18 +1,18 @@
 //
-//  GrafittAppCameraViewController.m
-//  Graffiti App
+//  GraffitiAppCameraViewController.m
+//  GraffitiApp
 //
 //  Created by Aaron Rosen on 4/25/14.
 //  Copyright (c) 2014 WesHack. All rights reserved.
 //
 
-#import "GrafittAppCameraViewController.h"
+#import "GraffitiAppCameraViewController.h"
 
-@interface GrafittAppCameraViewController ()
+@interface GraffitiAppCameraViewController ()
     - (void)postToURL:(NSURL *)url withImage:(UIImage *)image;
 @end
 
-@implementation GrafittAppCameraViewController
+@implementation GraffitiAppCameraViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,17 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)takePhotoButton:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -62,7 +51,7 @@
     self.cameraImageView.image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
-
+    
 }
 
 - (void)postToURL:(NSURL *)url withImage:(UIImage *)image {
@@ -85,12 +74,12 @@
     
     //TODO: will I need to send any params?
     //add params, all params are strings
-//    NSString *BoundaryConstant = boundary;
-//    for (NSString *params in _params) {
-//        [body appendData:[[NSString stringWithFormat:@"--%@\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
-//        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", param] dataUsingEncoding:NSUTF8StringEncoding]];
-//        [body appendData:[[NSString stringWithFormat:@"%@\r\n", [_params objectForKey:param]] dataUsingEncoding:NSUTF8StringEncoding]];
-//    }
+    //    NSString *BoundaryConstant = boundary;
+    //    for (NSString *params in _params) {
+    //        [body appendData:[[NSString stringWithFormat:@"--%@\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+    //        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", param] dataUsingEncoding:NSUTF8StringEncoding]];
+    //        [body appendData:[[NSString stringWithFormat:@"%@\r\n", [_params objectForKey:param]] dataUsingEncoding:NSUTF8StringEncoding]];
+    //    }
     
     //add image data
     NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
@@ -120,6 +109,20 @@
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)takePhoto:(id)sender {
 }
 @end

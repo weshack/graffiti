@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Graffiti App.xcscheme</key>
+		<key>GraffitiApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E6E41FA3190AEC9400A5F073</key>
+		<key>E6E41FEE190B2FEB00A5F073</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6E41FC4190AEC9400A5F073</key>
+		<key>E6E4200F190B2FEB00A5F073</key>
 		<dict>
 			<key>primary</key>
 			<true/>
