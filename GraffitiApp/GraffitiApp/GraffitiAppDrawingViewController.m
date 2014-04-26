@@ -2,7 +2,7 @@
 //  GraffitiAppDrawingViewController.m
 //  GraffitiApp
 //
-//  Created by Aaron Rosen on 4/25/14.
+//  Created by Aaron Rosen on 4/26/14.
 //  Copyright (c) 2014 WesHack. All rights reserved.
 //
 
@@ -27,57 +27,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"Drawing view controller did load");
+    drawingCanvas = [[DrawingCanvas alloc] init];
+    [self.view addSubview:drawingCanvas];
+    NSLog(@"added drawingCanvas view");
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    self.location = [touch locationInView:_drawingView];
-}
-
--(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint currentLocation = [touch locationInView:_drawingView];
-    
-    UIGraphicsBeginImageContext(_drawingView.frame.size);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [_drawingView.image drawInRect:CGRectMake(0, 0, _drawingView.frame.size.width, _drawingView.frame.size.height)];
-    CGContextSetLineCap(ctx, kCGLineCapRound);
-    CGContextSetLineWidth(ctx, 5.0);
-    CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);
-    CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, location.x, location.y);
-    CGContextAddLineToPoint(ctx, currentLocation.x, currentLocation.y);
-    CGContextStrokePath(ctx);
-    _drawingView.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    location = currentLocation;
-}
-
-- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint currentLocation = [touch locationInView:_drawingView];
-    
-    UIGraphicsBeginImageContext(_drawingView.frame.size);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [_drawingView.image drawInRect:CGRectMake(0, 0, _drawingView.frame.size.width, _drawingView.frame.size.height)];
-    CGContextSetLineCap(ctx, kCGLineCapRound);
-    CGContextSetLineWidth(ctx, 5.0);
-    CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);
-    CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, location.x, location.y);
-    CGContextAddLineToPoint(ctx, currentLocation.x, currentLocation.y);
-    CGContextStrokePath(ctx);
-    _drawingView.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    location = currentLocation;
 }
 
 /*

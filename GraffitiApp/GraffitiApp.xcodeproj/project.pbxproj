@@ -25,7 +25,9 @@
 		E6E4202A190B302400A5F073 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E42029190B302400A5F073 /* CoreLocation.framework */; };
 		E6E4202D190B305000A5F073 /* GraffitiAppMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E4202C190B305000A5F073 /* GraffitiAppMapViewController.m */; };
 		E6E42030190B306D00A5F073 /* GraffitiAppCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E4202F190B306D00A5F073 /* GraffitiAppCameraViewController.m */; };
-		E6E42033190B3ADE00A5F073 /* GraffitiAppDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E42032190B3ADE00A5F073 /* GraffitiAppDrawingViewController.m */; };
+		E6E42035190C2D4600A5F073 /* myImage.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E6E42034190C2D4600A5F073 /* myImage.JPG */; };
+		E6E42041190C50CF00A5F073 /* GraffitiAppDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E42040190C50CF00A5F073 /* GraffitiAppDrawingViewController.m */; };
+		E6E42044190C519600A5F073 /* DrawingCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E42043190C519600A5F073 /* DrawingCanvas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +66,11 @@
 		E6E4202C190B305000A5F073 /* GraffitiAppMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraffitiAppMapViewController.m; sourceTree = "<group>"; };
 		E6E4202E190B306D00A5F073 /* GraffitiAppCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraffitiAppCameraViewController.h; sourceTree = "<group>"; };
 		E6E4202F190B306D00A5F073 /* GraffitiAppCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraffitiAppCameraViewController.m; sourceTree = "<group>"; };
-		E6E42031190B3ADE00A5F073 /* GraffitiAppDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraffitiAppDrawingViewController.h; sourceTree = "<group>"; };
-		E6E42032190B3ADE00A5F073 /* GraffitiAppDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraffitiAppDrawingViewController.m; sourceTree = "<group>"; };
+		E6E42034190C2D4600A5F073 /* myImage.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = myImage.JPG; path = ../../../../../../Pictures/Hungary/Arrival/myImage.JPG; sourceTree = "<group>"; };
+		E6E4203F190C50CF00A5F073 /* GraffitiAppDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraffitiAppDrawingViewController.h; sourceTree = "<group>"; };
+		E6E42040190C50CF00A5F073 /* GraffitiAppDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraffitiAppDrawingViewController.m; sourceTree = "<group>"; };
+		E6E42042190C519600A5F073 /* DrawingCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingCanvas.h; sourceTree = "<group>"; };
+		E6E42043190C519600A5F073 /* DrawingCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingCanvas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,14 +134,17 @@
 		E6E41FF8190B2FEB00A5F073 /* GraffitiApp */ = {
 			isa = PBXGroup;
 			children = (
+				E6E42034190C2D4600A5F073 /* myImage.JPG */,
 				E6E42001190B2FEB00A5F073 /* GraffitiAppAppDelegate.h */,
 				E6E42002190B2FEB00A5F073 /* GraffitiAppAppDelegate.m */,
 				E6E42004190B2FEB00A5F073 /* Main.storyboard */,
+				E6E4203F190C50CF00A5F073 /* GraffitiAppDrawingViewController.h */,
+				E6E42040190C50CF00A5F073 /* GraffitiAppDrawingViewController.m */,
+				E6E42042190C519600A5F073 /* DrawingCanvas.h */,
+				E6E42043190C519600A5F073 /* DrawingCanvas.m */,
 				E6E4202B190B305000A5F073 /* GraffitiAppMapViewController.h */,
 				E6E4202C190B305000A5F073 /* GraffitiAppMapViewController.m */,
 				E6E4202E190B306D00A5F073 /* GraffitiAppCameraViewController.h */,
-				E6E42031190B3ADE00A5F073 /* GraffitiAppDrawingViewController.h */,
-				E6E42032190B3ADE00A5F073 /* GraffitiAppDrawingViewController.m */,
 				E6E4202F190B306D00A5F073 /* GraffitiAppCameraViewController.m */,
 				E6E42007190B2FEB00A5F073 /* GraffitiAppViewController.h */,
 				E6E42008190B2FEB00A5F073 /* GraffitiAppViewController.m */,
@@ -253,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E4200B190B2FEB00A5F073 /* Images.xcassets in Resources */,
+				E6E42035190C2D4600A5F073 /* myImage.JPG in Resources */,
 				E6E41FFD190B2FEB00A5F073 /* InfoPlist.strings in Resources */,
 				E6E42006190B2FEB00A5F073 /* Main.storyboard in Resources */,
 			);
@@ -276,7 +285,8 @@
 				E6E42003190B2FEB00A5F073 /* GraffitiAppAppDelegate.m in Sources */,
 				E6E42009190B2FEB00A5F073 /* GraffitiAppViewController.m in Sources */,
 				E6E42030190B306D00A5F073 /* GraffitiAppCameraViewController.m in Sources */,
-				E6E42033190B3ADE00A5F073 /* GraffitiAppDrawingViewController.m in Sources */,
+				E6E42041190C50CF00A5F073 /* GraffitiAppDrawingViewController.m in Sources */,
+				E6E42044190C519600A5F073 /* DrawingCanvas.m in Sources */,
 				E6E41FFF190B2FEB00A5F073 /* main.m in Sources */,
 				E6E4202D190B305000A5F073 /* GraffitiAppMapViewController.m in Sources */,
 			);
