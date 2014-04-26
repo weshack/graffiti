@@ -1,12 +1,12 @@
 package com.example.graffiti;
 
-
 import java.io.IOException;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -118,8 +118,11 @@ public class MainActivity extends ActionBarActivity {
                 // underlying surface is created and destroyed.
                 mHolder = getHolder();
                 mHolder.addCallback(this);
+                
                 // deprecated setting, but required on Android versions prior to 3.0
-                mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+                if(Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+                    mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+ 
             }
 
             public void surfaceCreated(SurfaceHolder holder) {
@@ -173,7 +176,7 @@ public class MainActivity extends ActionBarActivity {
                 @Override
                 public void onCreate(Bundle savedInstanceState) {
                     super.onCreate(savedInstanceState);
-                    setContentView(R.layout.main);
+                    setContentView(R.layout.activity_main);
 
                     // Create an instance of Camera
                     mCamera = getCameraInstance();
