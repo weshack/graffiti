@@ -172,7 +172,7 @@ public class ListPhotos extends ListActivity implements GooglePlayServicesClient
 		protected void onPostExecute(Graffiti[] result) {
 			for (int i = 0; i < result.length; i++){
 				ls.add(dist(latitude,longitude,result[i].latitude,result[i].longitude) + " miles away");
-				ls.urls.add("http://129.133.193.169:3000/static/graffiti/" + result[i].id + ".jpg");
+				ls.urls.add("http://stumobile0.wesleyan.edu:3000/static/graffiti/" + result[i].id + ".jpg");
 			}
 		}
 	}

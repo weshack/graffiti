@@ -290,7 +290,7 @@ public class FingerPaintActivity extends Activity implements
 	        int bytesRead, bytesAvailable, bufferSize;
 	        byte[] buffer;
 	        int maxBufferSize = 1*1024*1024;
-	        String urlString = "http://129.133.193.169:3000/upload/" + latitude.toString()
+	        String urlString = "http://stumobile0.wesleyan.edu:3000/upload/" + latitude.toString()
 					+ "/" + longitude.toString();
 	        try{
 	            //------------------ CLIENT REQUEST
