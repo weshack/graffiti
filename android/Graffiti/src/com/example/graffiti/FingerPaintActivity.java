@@ -263,8 +263,7 @@ case Save:
             String name= input.getText().toString();
             Bitmap bitmap = mv.getDrawingCache();
 
-         String path = Environment.getExternalStorageDirectory().getAbsolutePath(); 
-            File file = new File("/sdcard/"+name+".png");           
+            File file = new File(Environment.getExternalStorageDirectory().getPath() + "/" +name+".png");           
             try 
             {
                 if(!file.exists())
