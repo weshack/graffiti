@@ -1,16 +1,29 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.graffiti.MainActivity"
-    tools:ignore="MergeRootFrame" >
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:text="Button" />
+        android:id="@+id/ButtonTake"
+        android:layout_width="188dip"
+        android:layout_height="100dip"
+        android:layout_alignLeft="@+id/ButtonList"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:text="TAKE PHOTOS"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/ButtonList"
+        android:layout_width="188dip"
+        android:layout_height="100dip"
+        android:layout_below="@+id/ButtonTake"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:text="VIEW PHOTOS"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
+</RelativeLayout>

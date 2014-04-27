@@ -3,6 +3,7 @@ Graffiti\ App/Graffiti\ App.xcodeproj/*
 
 *.pydevproject
 android/.metadata/
+android/Graffiti/bin
 .gradle
 bin/
 tmp/
