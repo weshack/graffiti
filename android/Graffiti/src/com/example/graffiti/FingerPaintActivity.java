@@ -59,6 +59,7 @@ mPaint.setStrokeWidth(20);
 mEmboss = new EmbossMaskFilter(new float[] { 1, 1, 1 },
                            0.4f, 6, 3.5f);
 mBlur = new BlurMaskFilter(8, BlurMaskFilter.Blur.NORMAL);
+startActivityForResult(new Intent(MediaStore.ACTION_IMAGE_CAPTURE), 100);
 }
 
 private Paint       mPaint;
@@ -69,10 +70,18 @@ public void colorChanged(int color) {
 mPaint.setColor(color);
 }
 
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    if (resultCode == RESULT_OK) {
+        mv.mImage = (Bitmap)data.getExtras().get("data");
+    }
+}
+
 public class MyView extends View {
 
 private static final float MINP = 0.25f;
 private static final float MAXP = 0.75f;
+private Bitmap  mImage;
 private Bitmap  mBitmap;
 private Canvas  mCanvas;
 private Path    mPath;
@@ -107,7 +116,7 @@ public void openColorPicker() {
 @Override
  protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 super.onSizeChanged(w, h, oldw, oldh);
-mBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+mBitmap = Bitmap.createScaledBitmap(mImage, w, h, false);
 mCanvas = new Canvas(mBitmap);
 
 }
