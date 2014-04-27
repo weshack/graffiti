@@ -26,6 +26,14 @@ public class MainActivity extends ActionBarActivity {
     			startActivity(nextScreen);
             }
         });
+        btnTake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	Intent nextScreen = new Intent(getApplicationContext(),
+    					FingerPaintActivity.class);
+    			startActivity(nextScreen);
+            }
+        });
     }
 
 
