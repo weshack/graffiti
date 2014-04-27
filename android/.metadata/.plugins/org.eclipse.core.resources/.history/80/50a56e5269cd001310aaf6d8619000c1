@@ -1,0 +1,24 @@
+package com.example.graffiti;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.view.View;
+
+public class DrawFrame extends View{
+	Bitmap b;
+	Canvas c;
+
+	public DrawFrame(Context context){
+		super(context);
+		b = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
+		c = new Canvas(b);
+	}
+	
+	protected void onDraw(Canvas canvas){
+		canvas.drawColor(Color.BLACK);
+        canvas.drawBitmap(b, 10, 10, null);
+	}
+
+}
