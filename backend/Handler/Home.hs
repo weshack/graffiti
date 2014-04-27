@@ -38,25 +38,18 @@ postUploadImagesR :: String -> String -> Handler Value
 postUploadImagesR latT longT = do
     let lat = read latT :: Double
     let long = read longT :: Double
-    ((result, _), _) <- runFormPost uploadForm
-    case result of
-        FormSuccess (file, date) -> do
-            newId <- runDB $ insert (Image lat long date)
-            writeToServer newId file
-            returnJson $ object [ "result" .= ("ok" :: Text) ]
-        _ -> do
-            returnJson $ object [ "result" .= ("error" :: Text) ]
+    (file,_) <- runInputPost $ (,) <$> ireq fileField "image" <*> (pure 2)
+    date <- liftIO getTime
+    newId <- runDB $ insert (Image lat long (fromInteger date))
+    writeToServer newId file
+    returnJson $ object [ "result" .= ("ok" :: Text) ]
 
 uploadDirectory :: FilePath
 uploadDirectory = "static/graffiti"
 
 writeToServer :: Key Image -> FileInfo -> Handler ()
-writeToServer tId file = liftIO $ fileMove file (uploadDirectory </> ((show tId) ++ ".jpg"))
-
-uploadForm :: Html -> MForm Handler (FormResult (FileInfo, Int), Widget)
-uploadForm = renderDivs $ (,)
-    <$> fileAFormReq "Image file"
-    <*> lift (liftIO getTime)
+writeToServer tId file = case (unKey tId) of
+    PersistInt64 name -> liftIO $ fileMove file (uploadDirectory </> (show name) ++ ".jpg")
 
 getTime :: (Integral a) => IO a
 getTime = getCurrentTime >>= return . floor . utctDayTime

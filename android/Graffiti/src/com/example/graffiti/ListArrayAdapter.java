@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
@@ -20,11 +21,12 @@ import android.widget.TextView;
 
 public class ListArrayAdapter extends ArrayAdapter<String> {
 	private final Context context;
-	List<String> urls;
+	ArrayList<String> urls;
 		
 	public ListArrayAdapter(Context context) {
 		super(context, R.layout.list_mobile);
 		this.context = context;
+		urls = new ArrayList<String>();
 	}
  
 	@Override
@@ -51,6 +53,7 @@ public class ListArrayAdapter extends ArrayAdapter<String> {
 	     protected Bitmap doInBackground(ImageView... ivs) {
 	 	    try {
 	 	    	iv = ivs[0];
+	 	    	Log.e("fuck",(String)iv.getTag());
 		        URL url = new URL((String)iv.getTag());
 		        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
  		        connection.setDoInput(true);
