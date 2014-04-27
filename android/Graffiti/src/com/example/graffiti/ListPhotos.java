@@ -5,9 +5,11 @@ import org.json.JSONArray;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,21 +18,27 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-public class ListPhotos extends Activity {
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.location.LocationClient;
+
+public class ListPhotos extends Activity implements GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
     ListView listView ;
     private static double longitude, latitude;
-    
+    LocationClient mLocationClient;
     private static String url;
-    
+    @Override
+    protected void onStart(){super.onStart();mLocationClient.connect();}
+    @Override
+    protected void onStop(){mLocationClient.disconnect();super.onStop();}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
         
-//        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE); 
-//        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//        longitude = location.getLongitude();
-//        latitude = location.getLatitude();
+        mLocationClient = new LocationClient(this,this,this);
+        
 //        
 //        url = "/images/"+longitude + "/" +latitude;
         //JSONArray json = JSONfunctions.getJSONfromURL(url);
@@ -122,5 +130,22 @@ public class ListPhotos extends Activity {
     }
     return super.onOptionsItemSelected(item);
     }
+	@Override
+	public void onConnectionFailed(ConnectionResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void onConnected(Bundle connectionHint) {
+		Location location = mLocationClient.getLastLocation();
+        longitude = location.getLongitude();
+        latitude = location.getLatitude();
+		
+	}
+	@Override
+	public void onDisconnected() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
