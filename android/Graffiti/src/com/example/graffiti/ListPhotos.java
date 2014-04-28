@@ -111,7 +111,7 @@ public class ListPhotos extends ListActivity implements GooglePlayServicesClient
 			latitude = params[0];
 			longitude = params[1];
 			DefaultHttpClient   httpclient = new DefaultHttpClient(new BasicHttpParams());
-			HttpGet httpget = new HttpGet("http://129.133.193.169:3000/images/" + latitude.toString() + "/" + longitude.toString());
+			HttpGet httpget = new HttpGet("http://stumobile0.wesleyan.edu:3000/images/" + latitude.toString() + "/" + longitude.toString());
 			// Depends on your web service
 			httpget.setHeader("Content-type", "application/json");
 
